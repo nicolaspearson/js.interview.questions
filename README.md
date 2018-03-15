@@ -1,6 +1,6 @@
 # Javascript Interview Questions
 
-A bunch of practice interview questions to practice for upcoming javascript interviews
+A collection of questions / tests to practice that will assist you in preparing for a javascript interview.
 
 ## Getting Started
 
@@ -15,8 +15,8 @@ Contains the completed exercises. Refer to these answers if you get stuck.
 
 ### Exercises
 
-Contains the incomplete exercises. Duplicate this directory and provide a new name, e.g. `practice_exercises` when you want to start practising. This will allow to start afresh regularly if required.
+Contains the exercises. I suggest you duplicate this directory and provide a new name, e.g. `practice_exercises` when you want to start practising, this will allow to start over if you wish.
 
 ### Practice Exercises
 
-Contains the in progress exercises.
+Contains the exercises that you have completed. You can rename / delete this directory if you desire.
