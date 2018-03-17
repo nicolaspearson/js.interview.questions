@@ -14,6 +14,23 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  const max = (n - 1) * 2 + 1;
+  for (let i = 1; i <= n; i++) {
+    const hashes = (i - 1) * 2 + 1;
+    let str = '';
+    const delta = max - hashes;
+    for (let j = 0; j < delta / 2; j++) {
+      str += ' ';
+    }
+    for (let j = 0; j < hashes; j++) {
+      str += '#';
+    }
+    for (let j = 0; j < delta / 2; j++) {
+      str += ' ';
+    }
+    console.log(str);
+  }
+}
 
 module.exports = pyramid;
