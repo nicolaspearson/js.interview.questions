@@ -9,23 +9,46 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-  let tmpArray = [];
-  const chunkArray = [];
-  for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    if (tmpArray.length === size) {
-      chunkArray.push(tmpArray);
-      tmpArray = [];
-      tmpArray.push(item);
-    } else {
-      tmpArray.push(item);
-    }
-    if (i === array.length - 1) {
-      chunkArray.push(tmpArray);
-    }
+  const chunked = [];
+  let index = 0;
+  while (index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index += size;
   }
-  console.log(chunkArray);
-  return chunkArray;
+  return chunked;
 }
+
+// function chunk(array, size) {
+//   const chunked = [];
+//   let start = 0;
+//   let end = size;
+//   for (let i = 0; i < Math.ceil(array.length / size); i++) {
+//     const chunk = array.slice(start, end);
+//     chunked.push(chunk);
+//     start += size;
+//     end += size;
+//   }
+//   return chunked;
+// }
+
+// function chunk(array, size) {
+//     let tmpArray = [];
+//     const chunkArray = [];
+//     for (let i = 0; i < array.length; i++) {
+//       const item = array[i];
+//       if (tmpArray.length === size) {
+//         chunkArray.push(tmpArray);
+//         tmpArray = [];
+//         tmpArray.push(item);
+//       } else {
+//         tmpArray.push(item);
+//       }
+//       if (i === array.length - 1) {
+//         chunkArray.push(tmpArray);
+//       }
+//     }
+//     console.log(chunkArray);
+//     return chunkArray;
+//   }
 
 module.exports = chunk;

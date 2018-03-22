@@ -11,7 +11,7 @@ function capitalize(str) {
   const arr = str.split(' ');
   let newArray = [];
   for (item of arr) {
-    newArray.push(item[0].toUpperCase() + item.substr(1));
+    newArray.push(item[0].toUpperCase() + item.slice(1));
   }
   return newArray.join(' ');
 }
