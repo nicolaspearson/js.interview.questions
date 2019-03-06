@@ -9,11 +9,11 @@
 
 function capitalize(str) {
     const words = str.split(' ');
-    const caps = [];
+    const capped = [];
     for (const word of words) {
-        caps.push(word[0].toUpperCase() + word.slice(1));
+        capped.push(word[0].toUpperCase() + word.slice(1, word.length));
     }
-    return caps.join(' ');
+    return capped.join(' ');
 }
 
 module.exports = capitalize;

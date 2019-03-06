@@ -14,19 +14,18 @@
 
 function fizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
+        const three = i % 3 === 0;
+        const five = i % 5 === 0;
+        
+        if (three && five) {
             console.log('fizzbuzz');
-            continue;
-        }
-        if (i % 3 === 0) {
+        } else if (three) {
             console.log('fizz');
-            continue;
-        }
-        if (i % 5 === 0) {
+        } else if (five) {
             console.log('buzz');
-            continue;
+        } else {
+            console.log(i);
         }
-        console.log(i);
     }
 }
 
