@@ -1,5 +1,5 @@
 // --- Directions
-// Check to see if two provided strings are anagrams of eachother.
+// Check to see if two provided strings are anagrams of each other.
 // One string is an anagram of another if it uses the same characters
 // in the same quantity. Only consider characters, not spaces
 // or punctuation.  Consider capital letters to be the same as lower case
@@ -9,8 +9,16 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    return stringA.replace(/[^\w]+/gi, '').split('').sort().join('') ===
-    stringB.replace(/[^\w]+/gi, '').split('').sort().join('');
+  return cleanString(stringA) === cleanString(stringB);
+}
+
+function cleanString(value) {
+  return value
+    .replace(/[^\w]/g, "")
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("");
 }
 
 module.exports = anagrams;
